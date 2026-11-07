@@ -1,0 +1,31 @@
+{
+  "seed": 42,
+  "validation_fraction": 0.1,
+  "dataset_size": 60000,
+  "train_size": 54000,
+  "validation_size": 6000,
+  "train_class_counts": [
+    5400,
+    5400,
+    5400,
+    5400,
+    5400,
+    5400,
+    5400,
+    5400,
+    5400,
+    5400
+  ],
+  "validation_class_counts": [
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600,
+    600
+  ]
+}

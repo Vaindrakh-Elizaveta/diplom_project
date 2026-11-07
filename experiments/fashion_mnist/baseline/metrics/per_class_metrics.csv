@@ -1,0 +1,11 @@
+class_id,class_name,total_samples,correct_predictions,accuracy
+0,T-shirt/top,1000,861,0.861
+1,Trouser,1000,985,0.985
+2,Pullover,1000,888,0.888
+3,Dress,1000,927,0.927
+4,Coat,1000,884,0.884
+5,Sandal,1000,974,0.974
+6,Shirt,1000,721,0.721
+7,Sneaker,1000,975,0.975
+8,Bag,1000,983,0.983
+9,Ankle boot,1000,964,0.964

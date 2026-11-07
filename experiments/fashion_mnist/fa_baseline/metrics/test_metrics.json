@@ -1,0 +1,11 @@
+{
+  "experiment": "F-A baseline",
+  "train_size": 10800,
+  "validation_size": 6000,
+  "test_size": 10000,
+  "checkpoint_epoch": 14,
+  "validation_accuracy": 0.9013333333333333,
+  "test_accuracy": 0.8885,
+  "macro_f1": 0.8879213721519973,
+  "seed": 42
+}

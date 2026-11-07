@@ -1,0 +1,36 @@
+{
+  "normalization": {
+    "mean": 0.28620901279348543,
+    "std": 0.3531597507360165,
+    "calculated_from": "train split only",
+    "train_size": 54000
+  },
+  "training": {
+    "seed": 42,
+    "batch_size": 128,
+    "epochs": 15,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.3,
+    "loss": "CrossEntropyLoss",
+    "device": "cpu"
+  },
+  "runtime": {
+    "python_version": "3.10.7",
+    "torch_version": "2.14.1+cpu",
+    "torchvision_version": "0.29.1+cpu",
+    "device": "cpu",
+    "trainable_parameters": 105962
+  },
+  "dataset_sizes": {
+    "train": 54000,
+    "validation": 6000,
+    "test": 10000
+  },
+  "results": {
+    "best_epoch": null,
+    "best_validation_accuracy": null,
+    "test_accuracy": null
+  }
+}

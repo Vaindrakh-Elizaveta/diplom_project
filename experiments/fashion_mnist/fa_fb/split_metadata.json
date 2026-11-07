@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "source_split": "original train split",
+  "source_train_size": 54000,
+  "fa_size": 10800,
+  "fb_size": 43200,
+  "fa_fraction": 0.2,
+  "fb_fraction": 0.8,
+  "validation_size": 6000,
+  "test_size": 10000,
+  "stratified": true
+}

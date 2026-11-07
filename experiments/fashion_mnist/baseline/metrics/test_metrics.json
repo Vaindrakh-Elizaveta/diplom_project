@@ -1,0 +1,7 @@
+{
+  "checkpoint_epoch": 15,
+  "checkpoint_validation_accuracy": 0.9278333333333333,
+  "test_size": 10000,
+  "accuracy": 0.9162,
+  "macro_f1": 0.9156375132180606
+}

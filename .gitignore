@@ -1,0 +1,24 @@
+# Python and virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Downloaded Fashion-MNIST data
+data/fashion_mnist/
+
+# Local logs and editor files
+*.log
+.vscode/
+.idea/
+
+# Temporary notebook exports
+*.html
+
+# An older duplicate checkpoint; the canonical one is kept in checkpoints/
+experiments/fashion_mnist/baseline/best_model.pt
