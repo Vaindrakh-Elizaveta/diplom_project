@@ -1,6 +1,6 @@
-# Fashion-MNIST CNN baseline
+# Fashion-MNIST CNN experiments
 
-Проект содержит воспроизводимый baseline-эксперимент по классификации изображений Fashion-MNIST с помощью небольшой сверточной нейронной сети CNN.
+Проект посвящён исследованию классификации изображений Fashion-MNIST с помощью небольшой сверточной нейронной сети CNN и сравнению экспериментов с разным составом обучающих данных.
 
 ## Что уже сделано
 
@@ -12,9 +12,10 @@
 - Реализована архитектура CNN из `CNN.css`.
 - Используется нормализация, рассчитанная только по обучающей части.
 - Обучена модель на полной train-выборке.
-- Обучена базовая модель на подвыборке F-A, содержащей 20% train-данных.
+- Обучена модель на подвыборке F-A, содержащей 20% train-данных.
 - Для F-A/F-B сохранены индексы разбиения.
 - Сохранены checkpoint, история обучения, метрики по классам и confusion matrix.
+- Построены графики изменения loss и accuracy по эпохам для полной выборки и F-A.
 
 ## Результаты
 
@@ -28,7 +29,7 @@
 ## Структура проекта
 
 ```text
-configs/       конфигурация baseline-эксперимента
+configs/       конфигурации экспериментов
 experiments/   checkpoint, метрики, графики и сохранённые индексы
 notebooks/     исследовательский ноутбук с полным экспериментом
 src/           загрузка данных, модель, обучение и предсказание
@@ -62,42 +63,17 @@ notebooks/01_fashion_mnist_exploration.ipynb
 
 - разбиение train/validation/test;
 - нормализацию;
-- обучение полной baseline-модели;
+- обучение модели на полной train-выборке;
 - разбиение на F-A и F-B;
-- обучение F-A baseline;
+- обучение модели на F-A;
 - accuracy, Macro-F1, метрики по классам и confusion matrix.
 
-## Проверка модели на собственных изображениях
-
-Checkpoint полной baseline-модели находится здесь:
+Графики обучения сохраняются в папках соответствующих экспериментов:
 
 ```text
-experiments/fashion_mnist/baseline/checkpoints/best_model.pt
+experiments/fashion_mnist/baseline/figures/training_curves.png
+experiments/fashion_mnist/fa_baseline/figures/training_curves.png
 ```
-
-Одно изображение:
-
-```powershell
-python -m src.predict --image path\to\image.png
-```
-
-Папка с изображениями:
-
-```powershell
-python -m src.predict --folder path\to\images
-```
-
-Можно указать checkpoint F-A:
-
-```powershell
-python -m src.predict `
-  --checkpoint experiments/fashion_mnist/fa_baseline/checkpoints/best_model.pt `
-  --folder path\to\images
-```
-
-Скрипт преобразует изображение в оттенки серого, изменяет размер до `28 x 28`, применяет сохранённую нормализацию и выводит имя класса и confidence модели.
-
-Важно: модель обучена на изображениях, похожих на Fashion-MNIST — один предмет одежды на чёрно-белом изображении размером `28 x 28`. Для произвольных фотографий результат может быть низкого качества без дополнительной подготовки данных.
 
 ## Аппаратное окружение исходного запуска
 
